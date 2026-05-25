@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Dancing+Script:wght@700&display=swap');
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@font-face {
+  font-family: "Clash Display";
+  src: url('/fonts/ClashDisplay-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url('/fonts/ClashDisplay-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url('/fonts/ClashDisplay-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url('/fonts/ClashDisplay-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+ --font-display:  "Clash Display", "Clash Display Placeholder", sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --framer-font-family: "Inter", sans-serif;
+  --framer-font-open-type-features: "cv01" on, "cv02" on, "cv03" on, "cv04" on,
+    "cv05" on, "cv07" on, "cv09" on, "cv10" on, "cv11" on, "cv12" on, "cv13" on;
+  
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-brand-green: var(--brand-green);
+  --color-brand-blue: var(--brand-blue);
+  --color-surface: var(--surface);
+  --color-grid-line: var(--grid-line);
+  --color-mehron: var(--mehron);
+}
+
+:root {
+  --radius: 9999px;
+
+  /* 🔥 NEW THEME */
+  --background: black;
+
+  --foreground: white;
+
+  --surface: #5a0223;
+
+  --mehron-deep: hsl(350 65% 8%);
+  --mehron-solid: hsl(350 65% 22%);
+  --mehron-mid: hsl(350 70% 35%);
+
+  --card: #161616;
+  --card-foreground: #FEEFCE;
+
+  --popover: #5a0223;
+  --popover-foreground: white;
+
+  --primary: white;
+  --primary-foreground: #420219;
+
+  --secondary: #6e0330;
+  --secondary-foreground: gray;
+
+  --muted: #5a0223;
+  --muted-foreground: gray;
+
+  --accent: #7a0335;
+  --accent-foreground: white;
+
+  --destructive: #ff4d6d;
+  --destructive-foreground: #fff;
+
+  --border: rgba(254, 239, 206, 0.12);
+  --input: rgba(254, 239, 206, 0.18);
+  --ring: rgba(254, 239, 206, 0.4);
+
+  --brand-green: #4ade80;
+  --brand-blue: #60a5fa;
+
+  --mehron: linear-gradient(135deg, hsl(350 65% 22%), hsl(350 70% 35%));
+
+  /* 🔥 GRID COLOR (IMPORTANT) */
+--grid-line: rgba(254, 239, 206, 0.16);
+}
+
+
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+   font-family: var(--font-sans);
+  font-feature-settings: var(--framer-font-open-type-features);
+}
+
+  ::selection {
+    background: var(--color-foreground);
+    color: var(--color-background);
+  }
+}
+
+/* @layer utilities {
+  .font-display {
+    font-family: var(--font-sans);
+    letter-spacing: -0.04em;
+    font-weight: 600;
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+  } */
+
+  Subtle dot/grid texture overlay
+  /* .bg-dotgrid {
+    background-image: radial-gradient(
+      var(--color-grid-line) 1px,
+      transparent 1px
+    );
+    background-size: 4px 4px;
+  }
+
+  .bg-grid-lines {
+    background-image:
+      linear-gradient(to right, var(--color-grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--color-grid-line) 1px, transparent 1px);
+    background-size: 12.5% 12.5%;
+  } */
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Marquee animation */
+  @keyframes marquee-x {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    animation: marquee-x 25s linear infinite;
+  }
+  .animate-marquee-slow {
+    animation: marquee-x 80s linear infinite;
+  }
+
+
+
+/* Vertical */
+.grid-vertical {
+  gap: 240px;
+}
+
+@media (min-width: 810px) and (max-width: 1199px) {
+  .grid-vertical {
+    gap: 353px; /* EXACT */
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid-vertical {
+    gap: 420px;
+  }
+}
+
+/* Horizontal */
+.grid-horizontal {
+  gap: 240px;
+}
+
+@media (min-width: 810px) and (max-width: 1199px) {
+  .grid-horizontal {
+    gap: 353px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid-horizontal {
+    gap: 420px;
+  }
+}
+
+/* Mehron contrast utilities — image glows & tinted fades (ref: buzzculture) */
+.shadow-mehron {
+  box-shadow: 0 30px 80px -20px hsl(350 70% 30% / 0.45);
+}
+
+.shadow-mehron-sm {
+  box-shadow: 0 16px 48px -12px hsl(350 65% 25% / 0.38);
+}
+
+.glow-mehron {
+  box-shadow:
+    0 0 60px -10px hsl(350 65% 25% / 0.5),
+    0 0 120px -30px hsl(350 70% 35% / 0.25);
+}
+
+.ring-mehron {
+  box-shadow: 0 0 0 1.5px hsl(350 65% 35% / 0.45);
+}
+
+.bg-mehron-radial {
+  background: radial-gradient(ellipse at center, hsl(350 65% 22% / 0.35) 0%, transparent 70%);
+}
+
+.from-mehron-deep {
+  --tw-gradient-from: hsl(350 65% 8%) var(--tw-gradient-from-position);
+  --tw-gradient-to: transparent var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.via-mehron-fade {
+  --tw-gradient-via: hsl(350 65% 10% / 0.4) var(--tw-gradient-via-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-via), var(--tw-gradient-to);
+}
